@@ -26,7 +26,7 @@ async function run() {
     const database = client.db('tourplanner');
     const buyerCollection = database.collection('place');
  
-    //get api
+    //get api key
     app.get("/place", async (req, res) => {
       const couser= buyerCollection.find({});
       const place=await couser.toArray();
